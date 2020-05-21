@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Technical Documentation Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="navbar">
+            <header>CSS Documentation</header>
+            <div class="nav-links">
+                <a href="#CSS" class="nav-link">CSS</a>
+                <a href="#Box_Model" class="nav-link">Box Model</a>
+                <a href="#Background" class="nav-link">Background</a>
+                <a href="#Color" class="nav-link">Color</a>
+                <a href="#Font" class="nav-link">Font</a>
+            </div>
+        </nav>
+
+        <main id="main-doc">
+
+            <section id="CSS" class="main-section">
+                <header>CSS</header>
+
+                <p>CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on
+                    screen,
+                    paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web
+                    pages
+                    all at once. External stylesheets are stored in CSS files.</p>
+                <h3>Basic rule syntax</h3>
+                <h4>Style rule syntax</h4>
+                <code>
+                        selectorlist {
+                            property: value;
+                            [more property:value; pairs]
+                          }
+                          
+                          ... where selectorlist is:
+                           selector[:pseudo-class] 
+                           [::pseudo-element] 
+                           [, more selectorlists]
+                  
+                </code>
+                <h4>Style rule examples</h4>
+                <code>
+
+                        strong {
+                            color: red;
+                          }
+                          
+                        div.menu-bar li:hover > ul {
+                            display: block;
+                        }
+                    
+                </code>
+
+
+            </section>
+
+            <section id="Box_Model" class="main-section">
+                <header>Box Model</header>
+
+                <p>When laying out a document, the browser's rendering engine represents each element as a
+                    rectangular
+                    box
+                    according to the standard CSS basic box model. CSS determines the size, position, and properties
+                    (color,
+                    background, border size, etc.) of these boxes.</p>
+                <p> Every box is composed of four parts (or areas), defined by their respective edges: the content
+                    edge,
+                    padding edge, border edge, and margin edge. </p>
+                <img src="https://s3.amazonaws.com/viking_education/web_development/web_app_eng/css_box_model_chrome.png"
+                    alt="">
+
+            </section>
+
+            <section id="Background" class="main-section">
+                <header>Background</header>
+
+                <p>The background shorthand CSS property sets all background style properties at once, such as
+                    color,
+                    image, origin and size, repeat method, and others.
+                </p>
+                <h3>Syntax</h3>
+                <code>
+
+                        /* Using a background-color */
+                            background: green;
+                            
+                        /* Using a bg-image and repeat-style */
+                        background: url("test.jpg") repeat-y;
+                            
+                        /* Using a box and background-color */
+                        background: border-box red;
+                            
+                         /* A single image, centered and scaled */
+                        background: no-repeat center/80% url("../img/image.png"); 
+                    
+                </code>
+                <p>The background property is specified as one or more background layers, separated by commas.</p>
+                <p>Each layer may include zero or one occurrences of any of the following values:</p>
+                <ul>
+                    <li>
+                        &lt;attachment&#62
+                    </li>
+                    <li>
+                        &lt;bg-image&#62
+                    </li>
+                    <li>
+                        &lt;positiont&#62
+                    </li>
+                    <li>
+                        &lt;bg-size&#62
+                    </li>
+                    <li>
+                        &lt;repeat-style&#62
+                    </li>
+                </ul>
+
+            </section>
+
+            <section id="Color" class="main-section">
+                <header>Color</header>
+
+                <p>The color CSS property sets the foreground color value of an element's text and text decorations,
+                    and
+                    sets the currentcolor value. currentcolor may be used as an indirect value on other properties
+                    and
+                    is the default for other color properties, such as border-color.</p>
+
+                <h3>Syntax</h3>
+                <code>
+                    /* Keyword values */
+                    color: currentcolor;
+
+                    /* &lt;named-color&#62 values */
+                    color: red;
+                    color: orange;
+                    color: tan;
+                    color: rebeccapurple;
+
+                    /* &lt;hex-color&#62 values */
+                    color: #090;
+                    color: #009900;
+                    color: #090a;
+                    color: #009900aa;
+
+                    /* &lt;rgb()&#62 values */
+                    color: rgb(34, 12, 64, 0.6);
+                    color: rgba(34, 12, 64, 0.6);
+                    color: rgb(34 12 64 / 0.6);
+                    color: rgba(34 12 64 / 0.3);
+                    color: rgb(34.0 12 64 / 60%);
+                    color: rgba(34.6 12 64 / 30%);
+
+                    /* &lt;hsl()&#62 values */
+                    color: hsl(30, 100%, 50%, 0.6);
+                    color: hsla(30, 100%, 50%, 0.6);
+                    color: hsl(30 100% 50% / 0.6);
+                    color: hsla(30 100% 50% / 0.6);
+                    color: hsl(30.0 100% 50% / 60%);
+                    color: hsla(30.2 100% 50% / 60%);
+
+                    /* Global values */
+                    color: inherit;
+                    color: initial;
+                    color: unset;
+                
+            </code>
+            </section>
+
+            <section id="Font" class="main-section">
+                <header>Font</header>
+
+                <p>The font CSS property is a shorthand for
+                    font-style, font-variant, font-weight, font-size,
+                    line-height,and font-family.
+                    Alternatively, it sets an element's font to a system font.</p>
+                <h3>Syntax</h3>
+                <code>
+                        /* Set the font size to 12px and the line height to 14px.
+                        Set the font family to sans-serif */
+                        p { font: 12px/14px sans-serif }
+
+                        /* Set the font size to 80% of the parent element
+                        or default value (if no parent element present).
+                        Set the font family to sans-serif */
+                        p { font: 80% sans-serif }
+
+                        /* Set the font weight to bold,
+                        the font-style to italic,
+                        the font size to large,
+                        and the font family to serif. */
+                        p { font: bold italic large serif }
+
+                        /* Use the same font as the status bar of the window */
+                        p { font: status-bar }
+
+                    </code>
+                <p>The font property may be specified as either a single keyword, which will select a
+                    system font, or as
+                    a shorthand for various font-related properties.</p>
+                <p>If font is specified as a system keyword, it must be one of: caption, icon, menu,
+                    message-box,
+                    small-caption, status-bar.</p>
+
+            </section>
+            <footer>Read more about CSS Documentation <a href="https://devdocs.io/css/">CSS Documentation</a></footer>
+        </main>
+    </div>
+</body>
+
+</html>

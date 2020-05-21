@@ -1,0 +1,133 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    scroll-behavior: smooth;
+    background: wheat;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-areas: 
+    "navbar main-doc";
+    grid-gap: 30px;
+    grid-template-columns: 250px 1fr;
+}
+
+#main-doc{
+    grid-area: main-doc;
+    margin-bottom: 30px;
+    padding: 0 30px;
+}
+
+#navbar{
+    grid-area: navbar;
+    background-color: black;
+    color: wheat;
+    height: 100%;
+    max-width: 200px;
+    width: 100%;
+    position: fixed;
+    padding: 1rem;
+}
+#navbar header{
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#navbar a{
+    font-size: 1.2rem;
+    padding: 20px 0;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+#navbar a:hover{
+    color: wheat;
+}
+#navbar div{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-doc header{
+    font-size: 2rem;
+    font-weight: bold;
+}
+main .main-section{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+h4{
+    padding-left: 30px;
+    font-style: italic;
+}
+
+code{
+    background-color: #eaeaea;
+      display: block;
+      text-align: left;
+      white-space: pre-line;
+      padding: 15px;
+      margin-left: 20px;
+      margin-right: 50px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+}
+img{
+    height: 200px;
+    width: 300px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .wrapper{
+        grid-template-areas: 
+        "navbar"
+        "main-doc";
+        grid-template-columns: 1fr;
+    }
+    #navbar{
+        position: inherit;
+        position: fixed;
+        height: 50px;
+        max-width: 1000px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    #navbar div{
+        flex-direction: row;
+        align-items: center;
+        padding-left: 10px;
+    }
+    #navbar a{
+        padding: 0 10px;
+        border-bottom: none;
+    }
+
+    code{
+        word-break: break-word;
+    }
+
+@media only screen and (max-width:700px){
+    #navbar{
+        flex-direction:column;
+        text-align: center;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    #navbar div{
+        justify-content: center;
+    }
+
+}
+    
+    
