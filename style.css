@@ -122,12 +122,16 @@ img{
         flex-direction:column;
         text-align: center;
         justify-content: center;
-        padding-top: 20px;
+        padding: 20px 0;
+        position: fixed;
     }
     #navbar div{
         justify-content: center;
     }
-
+    #navbar a{
+        font-size: 16px;
+        padding
+    }
 }
     
     
